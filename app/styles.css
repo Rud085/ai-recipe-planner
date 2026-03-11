@@ -1,0 +1,205 @@
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-photography-healthy-vegetable-salad-picture-image_314186.jpg");
+  background-size:cover;
+  background-position:center;
+  min-height:100vh;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:40px;
+}
+
+.title{
+  font-size:50px;
+  font-weight:bold;
+  margin-bottom:10px;
+  color: white;
+  text-align: center;
+}
+
+.subtitle{
+  color:white;
+  margin-bottom:30px;
+  text-align: center;
+}
+
+.card{
+  background-color:cornsilk;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  width:100%;
+  max-width:600px;
+  color: black;
+}
+
+input{
+  padding:10px;
+  border:1px solid black;
+  border-radius:6px;
+  margin-right:10px;
+  color:black;
+  background-color: white;
+}
+
+button{
+  padding:10px 16px;
+  border:none;
+  border-radius:6px;
+  background-color:lemonchiffon;
+  color:black;
+  cursor:pointer;
+  margin-top: 10px;
+  position:sticky;
+  margin-right: 10px;
+}
+
+.layout{
+  display:flex;
+  gap:30px;
+}
+
+.left-panel{
+  background:wheat;
+  padding:25px;
+  border-radius:12px;
+  width:420px;
+  margin-top: 30px;
+  color: black;
+  margin-right: 60px;
+  margin-left: 180px;
+}
+
+.right-panel{
+  background:wheat;
+  padding:25px;
+  border-radius:12px;
+  width:420px;
+  margin-top: 30px;
+  color: black;
+  
+}
+
+.button-row{
+  display:flex;
+  gap:15px;
+  margin-top:10px;
+}
+
+.chip{
+  padding-left:10px;
+  border-radius:10px;
+  margin-right:8px;
+  margin-top: 5px;
+  display:inline-flex;
+  align-items:center;
+  gap:2px;
+  background-color:lemonchiffon;
+  color:black;
+  text-align: center;
+}
+
+.Remove{
+  border:none;
+  height: min-content;
+  width:min-content;
+  background-color:lemonchiffon;
+}
+
+.recipe-title{
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.right-panel ul{
+  padding-left:20px;
+  list-style-type: disc;
+}
+
+.right-panel ol{
+  padding-left:20px;
+}
+
+.right-panel li{
+  margin-bottom:6px;
+}
+
+.suggestions{
+  margin-bottom:15px;
+}
+
+.suggestion-chip{
+  display:inline-block;
+  background:#f0f0f0;
+  padding:6px 12px;
+  margin-right:8px;
+  margin-bottom:6px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.suggestion-chip:hover{
+  background:#d9d9d9;
+}
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 30px;
+  background-color:transparent;
+  color:white;
+  z-index:1000;
+}
+
+main{
+  margin-top: 70px;
+}
+
+.nav-title{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  color:white;
+  font-weight:700;
+  margin:5px;
+}
+
+.nav-links a:hover{
+  text-decoration:underline;
+}
+
+.logout{
+   background:burlywood;
+  background-color:transparent;
+  border:none;
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+}
+.logout:hover{
+  text-decoration:underline;
+}
+
+.abc:hover{
+  background-color: white;
+}
