@@ -18,6 +18,7 @@ export default function Home() {
   if (status === "loading") {
     return <p>Loading...</p>;
   }
+  
 
   return (
   <main>

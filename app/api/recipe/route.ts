@@ -24,7 +24,7 @@ Return JSON format like this:
 `
 
   const completion = await groq.chat.completions.create({
-    model: "gpt-4.1-mini",
+    model: "llama-3.1-8b-instant",
     messages: [
       { role: "user", content: prompt }
     ]
