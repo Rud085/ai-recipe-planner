@@ -2,24 +2,59 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-
   const { data: session } = useSession();
 
-  return (
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const isActive = (path: string) => pathname === path;
+
+  return (
     <nav className="navbar">
 
-      <div className="nav-left">
-        <Link href="/">AI Recipe Planner</Link>
+      <div className="nav-logo">
+        <Link href="/" onClick={() => setMenuOpen(false)}>
+          🤖 AI Recipe Planner
+        </Link>
+
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
       </div>
 
-      <div className="nav-right">
+      <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
 
-        <Link href="/">Home</Link>
-        <Link href="/meal-planner">Meal Planner</Link>
-        <Link href="/my-recipes">My Recipes</Link>
+        <Link
+          href="/"
+          className={isActive("/") ? "active-link" : ""}
+          onClick={() => setMenuOpen(false)}
+        >
+          🏠 Home
+        </Link>
+
+        <Link
+          href="/meal-planner"
+          className={isActive("/meal-planner") ? "active-link" : ""}
+          onClick={() => setMenuOpen(false)}
+        >
+          🍽 Meal Planner
+        </Link>
+
+        <Link
+          href="/my-recipes"
+          className={isActive("/my-recipes") ? "active-link" : ""}
+          onClick={() => setMenuOpen(false)}
+        >
+          ❤️ My Recipes
+        </Link>
 
         {session && (
           <>
@@ -31,7 +66,7 @@ export default function Navbar() {
               className="logout-btn"
               onClick={() => signOut({ callbackUrl: "/login" })}
             >
-              Logout
+              🚪 Logout
             </button>
           </>
         )}
@@ -39,6 +74,5 @@ export default function Navbar() {
       </div>
 
     </nav>
-
   );
 }
